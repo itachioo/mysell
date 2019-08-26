@@ -55,3 +55,14 @@ create table `order_detail`(
   `update_time` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
   primary key(`detail_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+-- 卖家
+create table `seller_info`(
+  `seller_id` varchar(32) not null,
+  `username` varchar(32) not null comment '商家名字',
+  `password` varchar(32) not null comment '密码',
+  `openid` varchar(64) not null comment '微信openid',
+  `create_time` timestamp not null default current_timestamp comment '创建时间',
+  `update_time` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
+  primary key(`seller_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8
