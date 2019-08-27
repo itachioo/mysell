@@ -1,7 +1,9 @@
 package com.study.sell.mysell.entity;
+import com.study.sell.mysell.enums.ProductStatusEnum;
 import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Date;
 
 
 @Entity
@@ -17,18 +19,24 @@ public class ProductInfo {
     private String productName;
 
     /** 商品单价 */
-    private int productPrice;
+    private Integer productPrice;
 
     /** 商品库存 */
-    private int productStock;
+    private Integer productStock;
 
     /** 商品类别 */
-    private int categoryType;
+    private Integer categoryType;
 
     /** 商品描述 */
     private String productDescription;
 
+    private String productIcon;
+
     /** 状态 0正常，1下架 */
-    private int productStatus=0;
+    private Integer productStatus= 0;
+
+    private Date createTime;
+
+    private Date updateTime;
 
 }
